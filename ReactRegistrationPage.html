@@ -1,0 +1,45 @@
+<html>
+<head>	
+  <meta charset="UTF-8" />
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+<div id="root"></div>
+    <script type="text/babel">
+    
+      function MyApp() {
+        return <form style={{"borderRadius":"25px","borderStyle":"solid","padding":"5px","width":"460px"}}>
+			<img src="AVLogo.png" alt="Availity" style={{"height":"40px","width":"150px"}}/><br/><br/>
+			<input type="text" required id="fname" name="fname" placeholder="First Name" style={textboxStyle}/>			
+			<input type="text" required id="lname" name="lname" placeholder="Last Name" style={textboxStyle}/>			
+			<input type="number" required id="npi" name="npi" placeholder="NPI Number" style={textboxStyle}/>		
+			<input type="text" required id="address" name="address" placeholder="Business Address Line 1" style={textboxStyle}/>
+			<input type="text" required id="address2" name="address2" placeholder="Business Address Line 2" style={textboxStyle}/>
+			<input type="text" required id="city" name="city" placeholder="City" style={textboxStyle}/>
+			<input type="text" required id="state" name="state" placeholder="State" style={textboxStyle}/>
+			<input type="number" required id="zip" name="zip" placeholder="Zip Code" style={textboxStyle}/>			
+			<input type="tel" required id="phone" name="phone" placeholder="Telephone Number" style={textboxStyle}/>			
+			<input type="email" required id="email" name="email" placeholder="Email Address" style={textboxStyle}/>
+			<button type="button" style={textboxStyle}>Register</button>
+		   </form>;
+      }
+
+	const textboxStyle = {
+		height:"40px",
+		width:"450px",
+		borderRadius:"15px",
+		paddingLeft:"10px",
+		margin:"5px"
+	}
+
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
+
+    </script>
+</body>
+
+</html>
